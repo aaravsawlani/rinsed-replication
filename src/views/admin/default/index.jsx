@@ -1,95 +1,88 @@
+import React from "react";
 import MiniCalendar from "components/calendar/MiniCalendar";
-import WeeklyRevenue from "views/admin/default/components/WeeklyRevenue";
-import TotalSpent from "views/admin/default/components/TotalSpent";
-import PieChartCard from "views/admin/default/components/PieChartCard";
-import { IoMdHome } from "react-icons/io";
-import { IoDocuments } from "react-icons/io5";
-import { MdBarChart, MdDashboard } from "react-icons/md";
+import WeeklyWashes from "components/admin/default/WeeklyWashes";
+import DailyRevenue from "components/admin/default/DailyRevenue";
+import MembershipPieChart from "components/admin/default/MembershipPieChart";
+import { IoMdCar } from "react-icons/io";
+import { WiDaySunny } from "react-icons/wi";
+import { FaUsers, FaMoneyBillWave } from "react-icons/fa";
 
 import { columnsDataCheck, columnsDataComplex } from "./variables/columnsData";
 
 import Widget from "components/widget/Widget";
-import CheckTable from "views/admin/default/components/CheckTable";
-import ComplexTable from "views/admin/default/components/ComplexTable";
-import DailyTraffic from "views/admin/default/components/DailyTraffic";
-import TaskCard from "views/admin/default/components/TaskCard";
-import tableDataCheck from "./variables/tableDataCheck.json";
-import tableDataComplex from "./variables/tableDataComplex.json";
+import HourlyWashes from "components/admin/default/HourlyWashes";
+import MembershipTable from "components/admin/default/MembershipTable";
+import WeatherCard from "components/admin/default/WeatherCard";
+import TopEmployees from "components/admin/default/TopEmployees";
 
 const Dashboard = () => {
   return (
     <div>
-      {/* Card widget */}
-
+      {/* Card widgets */}
       <div className="mt-3 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-6">
         <Widget
-          icon={<MdBarChart className="h-7 w-7" />}
-          title={"Earnings"}
-          subtitle={"$340.5"}
+          icon={<IoMdCar className="h-7 w-7" />}
+          title={"Cars Washed Today"}
+          subtitle={"156"}
         />
         <Widget
-          icon={<IoDocuments className="h-6 w-6" />}
-          title={"Spend this month"}
-          subtitle={"$642.39"}
+          icon={<FaMoneyBillWave className="h-6 w-6" />}
+          title={"Today's Revenue"}
+          subtitle={"$3,240"}
         />
         <Widget
-          icon={<MdBarChart className="h-7 w-7" />}
-          title={"Sales"}
-          subtitle={"$574.34"}
+          icon={<FaUsers className="h-7 w-7" />}
+          title={"New Members Today"}
+          subtitle={"12"}
         />
         <Widget
-          icon={<MdDashboard className="h-6 w-6" />}
-          title={"Your Balance"}
-          subtitle={"$1,000"}
+          icon={<WiDaySunny className="h-6 w-6" />}
+          title={"Current Weather"}
+          subtitle={"Sunny, 75°F"}
         />
         <Widget
-          icon={<MdBarChart className="h-7 w-7" />}
-          title={"New Tasks"}
-          subtitle={"145"}
+          icon={<IoMdCar className="h-7 w-7" />}
+          title={"Member Cars Washed"}
+          subtitle={"78"}
         />
         <Widget
-          icon={<IoMdHome className="h-6 w-6" />}
-          title={"Total Projects"}
-          subtitle={"$2433"}
+          icon={<FaUsers className="h-6 w-6" />}
+          title={"Total Members"}
+          subtitle={"1,567"}
         />
       </div>
 
       {/* Charts */}
-
       <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
-        <TotalSpent />
-        <WeeklyRevenue />
+        <WeeklyWashes />
+        <DailyRevenue />
       </div>
 
       {/* Tables & Charts */}
-
       <div className="mt-5 grid grid-cols-1 gap-5 xl:grid-cols-2">
-        {/* Check Table */}
+        {/* Hourly Washes */}
         <div>
-          <CheckTable
+          <HourlyWashes
             columnsData={columnsDataCheck}
-            tableData={tableDataCheck}
+            tableData={[]} // Add your hourly wash data here
           />
         </div>
 
-        {/* Traffic chart & Pie Chart */}
-
+        {/* Weather and Membership Pie Chart */}
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
-          <DailyTraffic />
-          <PieChartCard />
+          <WeatherCard />
+          <MembershipPieChart />
         </div>
 
-        {/* Complex Table , Task & Calendar */}
-
-        <ComplexTable
+        {/* Membership Table */}
+        <MembershipTable
           columnsData={columnsDataComplex}
-          tableData={tableDataComplex}
+          tableData={[]} // Add your membership data here
         />
 
-        {/* Task chart & Calendar */}
-
+        {/* Top Employees and Calendar */}
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
-          <TaskCard />
+          <TopEmployees />
           <div className="grid grid-cols-1 rounded-[20px]">
             <MiniCalendar />
           </div>
