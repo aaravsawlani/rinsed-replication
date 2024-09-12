@@ -7,6 +7,8 @@ const RecentReviews = () => {
     { name: "John Doe", rating: 5, comment: "Great service! My car looks brand new." },
     { name: "Jane Smith", rating: 4, comment: "Very good experience. Will come back." },
     { name: "Mike Johnson", rating: 5, comment: "Excellent wash and friendly staff." },
+    { name: "Emily Brown", rating: 4, comment: "Good service, but a bit pricey." },
+    { name: "David Lee", rating: 5, comment: "Best car wash in town! Highly recommended." },
   ];
 
   const renderStars = (rating) => {

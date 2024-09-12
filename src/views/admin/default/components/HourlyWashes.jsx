@@ -1,103 +1,114 @@
-import CardMenu from "components/card/CardMenu";
-import Card from "components/card";
 import React from "react";
-import {
-  useGlobalFilter,
-  usePagination,
-  useSortBy,
-  useTable,
-} from "react-table";
-import { MdCheckCircle, MdCancel, MdOutlineError } from "react-icons/md";
+import Card from "components/card";
+import BarChart from "components/charts/BarChart";
+import { MdBarChart } from "react-icons/md";
 
-const HourlyWashes = (props) => {
-  const { columnsData, tableData } = props;
-
-  const columns = useMemo(() => columnsData, [columnsData]);
-  const data = useMemo(() => tableData, [tableData]);
-
-  const tableInstance = useTable(
+const HourlyWashes = () => {
+  const barChartDataHourlyWashes = [
     {
-      columns,
-      data,
+      name: "Cars Washed",
+      data: [10, 5, 3, 2, 1, 2, 4, 8, 15, 25, 30, 35, 40, 38, 35, 30, 25, 20, 15, 12, 8, 5, 3, 1],
     },
-    useGlobalFilter,
-    useSortBy,
-    usePagination
-  );
+  ];
 
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    page,
-    prepareRow,
-    initialState,
-  } = tableInstance;
-  initialState.pageSize = 11;
+  const barChartOptionsHourlyWashes = {
+    chart: {
+      toolbar: {
+        show: false,
+      },
+    },
+    tooltip: {
+      style: {
+        fontSize: "12px",
+        fontFamily: undefined,
+        backgroundColor: "#000000"
+      },
+      onDatasetHover: {
+        style: {
+          fontSize: "12px",
+          fontFamily: undefined,
+        },
+      },
+      theme: "dark",
+    },
+    xaxis: {
+      categories: ["12AM", "1AM", "2AM", "3AM", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM"],
+      show: true,
+      labels: {
+        show: true,
+        style: {
+          colors: "#A3AED0",
+          fontSize: "10px",
+          fontWeight: "500",
+        },
+      },
+      axisBorder: {
+        show: false,
+      },
+      axisTicks: {
+        show: false,
+      },
+    },
+    yaxis: {
+      show: true,
+      color: "black",
+      labels: {
+        show: true,
+        style: {
+          colors: "#A3AED0",
+          fontSize: "14px",
+          fontWeight: "500",
+        },
+      },
+    },
+    grid: {
+      borderColor: "rgba(163, 174, 208, 0.3)",
+      show: true,
+      yaxis: {
+        lines: {
+          show: true,
+        },
+      },
+      row: {
+        opacity: 0.5,
+      },
+      column: {
+        opacity: 0.5,
+      },
+    },
+    fill: {
+      type: "solid",
+      colors: ["#5E37FF"],
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    plotOptions: {
+      bar: {
+        borderRadius: 10,
+        columnWidth: "40px",
+      },
+    },
+  };
 
   return (
-    <Card extra={"w-full h-full p-4"}>
-      <div className="relative flex items-center justify-between">
-        <div className="text-xl font-bold text-navy-700 dark:text-white">
+    <Card extra="flex flex-col bg-white w-full rounded-3xl py-6 px-2 text-center">
+      <div className="mb-auto flex items-center justify-between px-6">
+        <h2 className="text-lg font-bold text-navy-700 dark:text-white">
           Hourly Car Washes
-        </div>
-        <CardMenu />
+        </h2>
+        <button className="!linear z-[1] flex items-center justify-center rounded-lg bg-lightPrimary p-2 text-brand-500 !transition !duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-navy-700 dark:text-white dark:hover:bg-white/20 dark:active:bg-white/10">
+          <MdBarChart className="h-6 w-6" />
+        </button>
       </div>
 
-      <div className="mt-8 overflow-x-scroll xl:overflow-x-hidden">
-        <table {...getTableProps()} className="w-full">
-          <thead>
-            {headerGroups.map((headerGroup, index) => (
-              <tr {...headerGroup.getHeaderGroupProps()} key={index}>
-                {headerGroup.headers.map((column, index) => (
-                  <th
-                    {...column.getHeaderProps(column.getSortByToggleProps())}
-                    key={index}
-                    className="border-b border-gray-200 pr-14 pb-[10px] text-start dark:!border-navy-700"
-                  >
-                    <div className="text-xs font-bold tracking-wide text-gray-600 lg:text-xs">
-                      {column.render("Header")}
-                    </div>
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody {...getTableBodyProps()}>
-            {page.map((row, index) => {
-              prepareRow(row);
-              return (
-                <tr {...row.getRowProps()} key={index}>
-                  {row.cells.map((cell, index) => {
-                    let data = "";
-                    if (cell.column.Header === "HOUR") {
-                      data = (
-                        <p className="text-sm font-bold text-navy-700 dark:text-white">
-                          {cell.value}
-                        </p>
-                      );
-                    } else if (cell.column.Header === "WASHES") {
-                      data = (
-                        <p className="text-sm font-bold text-navy-700 dark:text-white">
-                          {cell.value}
-                        </p>
-                      );
-                    }
-                    return (
-                      <td
-                        className="pt-[14px] pb-[18px] sm:text-[14px]"
-                        {...cell.getCellProps()}
-                        key={index}
-                      >
-                        {data}
-                      </td>
-                    );
-                  })}
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+      <div className="md:mt-16 lg:mt-0">
+        <div className="h-[250px] w-full xl:h-[350px]">
+          <BarChart
+            chartData={barChartDataHourlyWashes}
+            chartOptions={barChartOptionsHourlyWashes}
+          />
+        </div>
       </div>
     </Card>
   );

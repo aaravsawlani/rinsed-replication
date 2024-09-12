@@ -75,10 +75,7 @@ const Dashboard = () => {
       <div className="mt-5 grid grid-cols-1 gap-5 xl:grid-cols-2">
         {/* Hourly Washes */}
         <div>
-          <HourlyWashes
-            columnsData={columnsDataCheck}
-            tableData={[]} // Add your hourly wash data here
-          />
+          <HourlyWashes />
         </div>
 
         {/* Weather and Membership Pie Chart */}
