@@ -1,6 +1,6 @@
 import CardMenu from "components/card/CardMenu";
 import Card from "components/card";
-import React, { useMemo } from "react";
+import React from "react";
 import {
   useGlobalFilter,
   usePagination,

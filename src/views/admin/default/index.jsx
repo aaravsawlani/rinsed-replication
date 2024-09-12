@@ -13,22 +13,19 @@ import Widget from "components/widget/Widget";
 import HourlyWashes from "./components/HourlyWashes";
 import MembershipTable from "./components/MembershipTable";
 import WeatherCard from "./components/WeatherCard";
-import TopEmployees from "./components/TopEmployees";
+import RecentReviews from "./components/RecentReviews";
 
 const membershipTableData = [
-  {
-    name: "John Doe",
-    membershipType: "Premium",
-    washesThisMonth: 8,
-    memberSince: "Jan 2023",
-  },
-  {
-    name: "Jane Smith",
-    membershipType: "Basic",
-    washesThisMonth: 3,
-    memberSince: "Mar 2023",
-  },
-  // Add more sample data as needed
+  { name: "John Doe", membershipType: "Basic", washesThisMonth: 8, memberSince: "Jan 2023" },
+  { name: "Jane Smith", membershipType: "Super", washesThisMonth: 12, memberSince: "Mar 2023" },
+  { name: "Mike Johnson", membershipType: "Carnauba", washesThisMonth: 15, memberSince: "Feb 2023" },
+  { name: "Emily Brown", membershipType: "Graphene", washesThisMonth: 20, memberSince: "Apr 2023" },
+  { name: "David Lee", membershipType: "Basic", washesThisMonth: 6, memberSince: "May 2023" },
+  { name: "Sarah Wilson", membershipType: "Super", washesThisMonth: 10, memberSince: "Jan 2023" },
+  { name: "Tom Harris", membershipType: "Carnauba", washesThisMonth: 18, memberSince: "Mar 2023" },
+  { name: "Lisa Chen", membershipType: "Graphene", washesThisMonth: 22, memberSince: "Feb 2023" },
+  { name: "Alex Taylor", membershipType: "Basic", washesThisMonth: 7, memberSince: "Apr 2023" },
+  { name: "Olivia White", membershipType: "Super", washesThisMonth: 14, memberSince: "May 2023" },
 ];
 
 const Dashboard = () => {
@@ -98,7 +95,7 @@ const Dashboard = () => {
 
         {/* Top Employees and Calendar */}
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
-          <TopEmployees />
+          <RecentReviews />
           <div className="grid grid-cols-1 rounded-[20px]">
             <MiniCalendar />
           </div>
