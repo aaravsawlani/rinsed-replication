@@ -401,21 +401,8 @@ export const barChartOptionsWeeklyWashes = {
     },
   },
   fill: {
-    type: "gradient",
-    gradient: {
-      type: "vertical",
-      shadeIntensity: 1,
-      opacityFrom: 0.7,
-      opacityTo: 0.9,
-      colorStops: [
-        { offset: 0, color: "#FF6B6B", opacity: 1 },
-        { offset: 20, color: "#FFD93D", opacity: 1 },
-        { offset: 40, color: "#6BCB77", opacity: 1 },
-        { offset: 60, color: "#4D96FF", opacity: 1 },
-        { offset: 80, color: "#9B59B6", opacity: 1 },
-        { offset: 100, color: "#FF6B6B", opacity: 1 },
-      ],
-    },
+    type: "solid",
+    colors: ["#FF6B6B", "#FFD93D", "#6BCB77", "#4D96FF", "#9B59B6", "#FF6B6B", "#4318FF"],
   },
   dataLabels: {
     enabled: false,
@@ -502,21 +489,8 @@ export const barChartOptionsDailyRevenue = {
     },
   },
   fill: {
-    type: "gradient",
-    gradient: {
-      type: "vertical",
-      shadeIntensity: 1,
-      opacityFrom: 0.7,
-      opacityTo: 0.9,
-      colorStops: [
-        { offset: 0, color: "#FF6B6B", opacity: 1 },
-        { offset: 20, color: "#FFD93D", opacity: 1 },
-        { offset: 40, color: "#6BCB77", opacity: 1 },
-        { offset: 60, color: "#4D96FF", opacity: 1 },
-        { offset: 80, color: "#9B59B6", opacity: 1 },
-        { offset: 100, color: "#FF6B6B", opacity: 1 },
-      ],
-    },
+    type: "solid",
+    colors: ["#FF6B6B", "#FFD93D", "#6BCB77", "#4D96FF", "#9B59B6", "#FF6B6B", "#4318FF"],
   },
   dataLabels: {
     enabled: false,
