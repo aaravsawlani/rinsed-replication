@@ -15,6 +15,22 @@ import MembershipTable from "./components/MembershipTable";
 import WeatherCard from "./components/WeatherCard";
 import TopEmployees from "./components/TopEmployees";
 
+const membershipTableData = [
+  {
+    name: "John Doe",
+    membershipType: "Premium",
+    washesThisMonth: 8,
+    memberSince: "Jan 2023",
+  },
+  {
+    name: "Jane Smith",
+    membershipType: "Basic",
+    washesThisMonth: 3,
+    memberSince: "Mar 2023",
+  },
+  // Add more sample data as needed
+];
+
 const Dashboard = () => {
   return (
     <div>
@@ -77,7 +93,7 @@ const Dashboard = () => {
         {/* Membership Table */}
         <MembershipTable
           columnsData={columnsDataComplex}
-          tableData={[]} // Add your membership data here
+          tableData={membershipTableData} // Add your membership data here
         />
 
         {/* Top Employees and Calendar */}
