@@ -400,19 +400,18 @@ export const barChartOptionsWeeklyWashes = {
       },
     },
   },
-  colors: ["#FF6B6B", "#FFD93D", "#6BCB77", "#4D96FF", "#9B59B6", "#FF6B6B", "#4318FF"],
-  plotOptions: {
-    bar: {
-      borderRadius: 10,
-      columnWidth: "40px",
-      distributed: true, // Add this line
-    },
+  fill: {
+    type: "solid",
+    colors: ["#4D96FF"], // Use Thursday's color for all bars
   },
   dataLabels: {
     enabled: false,
   },
-  legend: {
-    show: false
+  plotOptions: {
+    bar: {
+      borderRadius: 10,
+      columnWidth: "40px",
+    },
   },
 };
 
@@ -489,18 +488,17 @@ export const barChartOptionsDailyRevenue = {
       },
     },
   },
-  colors: ["#FF6B6B", "#FFD93D", "#6BCB77", "#4D96FF", "#9B59B6", "#FF6B6B", "#4318FF"],
-  plotOptions: {
-    bar: {
-      borderRadius: 10,
-      columnWidth: "40px",
-      distributed: true, // Add this line
-    },
+  fill: {
+    type: "solid",
+    colors: ["#4D96FF"], // Use Thursday's color for all bars
   },
   dataLabels: {
     enabled: false,
   },
-  legend: {
-    show: false
+  plotOptions: {
+    bar: {
+      borderRadius: 10,
+      columnWidth: "40px",
+    },
   },
 };
