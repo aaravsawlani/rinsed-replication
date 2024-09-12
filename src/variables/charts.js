@@ -408,18 +408,12 @@ export const barChartOptionsWeeklyWashes = {
       opacityFrom: 0.7,
       opacityTo: 0.9,
       colorStops: [
-        [
-          {
-            offset: 0,
-            color: "#4318FF",
-            opacity: 1,
-          },
-          {
-            offset: 100,
-            color: "rgba(67, 24, 255, 1)",
-            opacity: 0.28,
-          },
-        ],
+        { offset: 0, color: "#FF6B6B", opacity: 1 },
+        { offset: 20, color: "#FFD93D", opacity: 1 },
+        { offset: 40, color: "#6BCB77", opacity: 1 },
+        { offset: 60, color: "#4D96FF", opacity: 1 },
+        { offset: 80, color: "#9B59B6", opacity: 1 },
+        { offset: 100, color: "#FF6B6B", opacity: 1 },
       ],
     },
   },
@@ -515,18 +509,12 @@ export const barChartOptionsDailyRevenue = {
       opacityFrom: 0.7,
       opacityTo: 0.9,
       colorStops: [
-        [
-          {
-            offset: 0,
-            color: "#4318FF",
-            opacity: 1,
-          },
-          {
-            offset: 100,
-            color: "rgba(67, 24, 255, 1)",
-            opacity: 0.28,
-          },
-        ],
+        { offset: 0, color: "#FF6B6B", opacity: 1 },
+        { offset: 20, color: "#FFD93D", opacity: 1 },
+        { offset: 40, color: "#6BCB77", opacity: 1 },
+        { offset: 60, color: "#4D96FF", opacity: 1 },
+        { offset: 80, color: "#9B59B6", opacity: 1 },
+        { offset: 100, color: "#FF6B6B", opacity: 1 },
       ],
     },
   },
