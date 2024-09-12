@@ -1,8 +1,8 @@
 import React from "react";
 import MiniCalendar from "components/calendar/MiniCalendar";
-import WeeklyWashes from "components/admin/default/WeeklyWashes";
-import DailyRevenue from "components/admin/default/DailyRevenue";
-import MembershipPieChart from "components/admin/default/MembershipPieChart";
+import WeeklyWashes from "./components/WeeklyWashes";
+import DailyRevenue from "./components/DailyRevenue";
+import MembershipPieChart from "./components/MembershipPieChart";
 import { IoMdCar } from "react-icons/io";
 import { WiDaySunny } from "react-icons/wi";
 import { FaUsers, FaMoneyBillWave } from "react-icons/fa";
@@ -10,10 +10,10 @@ import { FaUsers, FaMoneyBillWave } from "react-icons/fa";
 import { columnsDataCheck, columnsDataComplex } from "./variables/columnsData";
 
 import Widget from "components/widget/Widget";
-import HourlyWashes from "components/admin/default/HourlyWashes";
-import MembershipTable from "components/admin/default/MembershipTable";
-import WeatherCard from "components/admin/default/WeatherCard";
-import TopEmployees from "components/admin/default/TopEmployees";
+import HourlyWashes from "./components/HourlyWashes";
+import MembershipTable from "./components/MembershipTable";
+import WeatherCard from "./components/WeatherCard";
+import TopEmployees from "./components/TopEmployees";
 
 const Dashboard = () => {
   return (
