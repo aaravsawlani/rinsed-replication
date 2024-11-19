@@ -28,7 +28,7 @@ const membershipTableData = [
   { name: "Olivia White", membershipType: "Super", washesThisMonth: 14, memberSince: "May 2023" },
 ];
 
-const TodayDashboard = () => {
+const Today = () => {
   return (
     <div>
       {/* Card widgets */}
@@ -102,4 +102,4 @@ const TodayDashboard = () => {
   );
 };
 
-export default TodayDashboard;
+export default Today;
