@@ -1,105 +1,96 @@
 import React from "react";
-import MiniCalendar from "components/calendar/MiniCalendar";
-import WeeklyWashes from "./components/WeeklyWashes";
-import DailyRevenue from "./components/DailyRevenue";
-import MembershipPieChart from "./components/MembershipPieChart";
-import { IoMdCar } from "react-icons/io";
-import { WiDaySunny } from "react-icons/wi";
-import { FaUsers, FaMoneyBillWave } from "react-icons/fa";
-
-import { columnsDataCheck, columnsDataComplex } from "./variables/columnsData";
-
+import Card from "components/card";
+import PieChart from "components/charts/PieChart";
+import BarChart from "components/charts/BarChart";
 import Widget from "components/widget/Widget";
-import HourlyWashes from "./components/HourlyWashes";
-import MembershipTable from "./components/MembershipTable";
-import WeatherCard from "./components/WeatherCard";
-import RecentReviews from "./components/RecentReviews";
+import { FaMoneyBillWave, FaUsers } from "react-icons/fa";
+import { IoMdCar } from "react-icons/io";
 
-const membershipTableData = [
-  { name: "John Doe", membershipType: "Basic", washesThisMonth: 8, memberSince: "Jan 2023" },
-  { name: "Jane Smith", membershipType: "Super", washesThisMonth: 12, memberSince: "Mar 2023" },
-  { name: "Mike Johnson", membershipType: "Carnauba", washesThisMonth: 15, memberSince: "Feb 2023" },
-  { name: "Emily Brown", membershipType: "Graphene", washesThisMonth: 20, memberSince: "Apr 2023" },
-  { name: "David Lee", membershipType: "Basic", washesThisMonth: 6, memberSince: "May 2023" },
-  { name: "Sarah Wilson", membershipType: "Super", washesThisMonth: 10, memberSince: "Jan 2023" },
-  { name: "Tom Harris", membershipType: "Carnauba", washesThisMonth: 18, memberSince: "Mar 2023" },
-  { name: "Lisa Chen", membershipType: "Graphene", washesThisMonth: 22, memberSince: "Feb 2023" },
-  { name: "Alex Taylor", membershipType: "Basic", washesThisMonth: 7, memberSince: "Apr 2023" },
-  { name: "Olivia White", membershipType: "Super", washesThisMonth: 14, memberSince: "May 2023" },
+// Fake data for the charts
+const pieChartData = {
+  totalCars: [40, 30, 30], // Example: [Basic, Super, Premium]
+  memberCars: [20, 15, 15],
+  nonMemberCars: [20, 15, 15],
+  newMemberships: [5, 3, 2], // Example: [Basic, Super, Premium]
+};
+
+const barChartData = [
+  {
+    name: "Cars Washed",
+    data: [5, 10, 15, 20, 25, 30, 35, 40, 38, 35, 30, 25, 20, 15, 12, 8, 5, 3, 1, 0, 0, 0, 0, 0],
+  },
 ];
 
-const Today = () => {
+const barChartOptions = {
+  chart: {
+    toolbar: {
+      show: false,
+    },
+  },
+  xaxis: {
+    categories: ["12AM", "1AM", "2AM", "3AM", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM"],
+  },
+  fill: {
+    type: "solid",
+    colors: ["#4D96FF"],
+  },
+};
+
+const TodayDashboard = () => {
   return (
-    <div>
-      {/* Card widgets */}
-      <div className="mt-3 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-6">
-        <Widget
-          icon={<IoMdCar className="h-7 w-7" />}
-          title={"Cars Washed Today"}
-          subtitle={"156"}
-        />
-        <Widget
-          icon={<FaMoneyBillWave className="h-6 w-6" />}
-          title={"Today's Revenue"}
-          subtitle={"$3,240"}
-        />
-        <Widget
-          icon={<FaUsers className="h-7 w-7" />}
-          title={"New Members Today"}
-          subtitle={"12"}
-        />
-        <Widget
-          icon={<WiDaySunny className="h-6 w-6" />}
-          title={"Current Weather"}
-          subtitle={"Sunny, 75°F"}
-        />
-        <Widget
-          icon={<IoMdCar className="h-7 w-7" />}
-          title={"Member Cars Washed"}
-          subtitle={"78"}
-        />
-        <Widget
-          icon={<FaUsers className="h-6 w-6" />}
-          title={"Total Members"}
-          subtitle={"1,567"}
-        />
-      </div>
+    <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {/* Total Cars Washed by Type */}
+      <Card extra="p-4">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Total Cars Washed by Type</h4>
+        <PieChart options={{}} series={pieChartData.totalCars} />
+      </Card>
 
-      {/* Charts */}
-      <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
-        <WeeklyWashes />
-        <DailyRevenue />
-      </div>
+      {/* Total Member Cars Washed by Type */}
+      <Card extra="p-4">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Total Member Cars Washed by Type</h4>
+        <PieChart options={{}} series={pieChartData.memberCars} />
+      </Card>
 
-      {/* Tables & Charts */}
-      <div className="mt-5 grid grid-cols-1 gap-5 xl:grid-cols-2">
-        {/* Hourly Washes */}
-        <div>
-          <HourlyWashes />
-        </div>
+      {/* Total Non-Member Cars Washed by Type */}
+      <Card extra="p-4">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Total Non-Member Cars Washed by Type</h4>
+        <PieChart options={{}} series={pieChartData.nonMemberCars} />
+      </Card>
 
-        {/* Weather and Membership Pie Chart */}
-        <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
-          <WeatherCard />
-          <MembershipPieChart />
-        </div>
+      {/* Total Cars Washed Per Hour */}
+      <Card extra="p-4 col-span-2">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Total Cars Washed Per Hour</h4>
+        <BarChart chartData={barChartData} chartOptions={barChartOptions} />
+      </Card>
 
-        {/* Membership Table */}
-        <MembershipTable
-          columnsData={columnsDataComplex}
-          tableData={membershipTableData} // Add your membership data here
-        />
+      {/* Day's Revenue */}
+      <Widget
+        icon={<FaMoneyBillWave className="h-6 w-6" />}
+        title={"Day's Revenue"}
+        subtitle={"$3,240"}
+      />
 
-        {/* Top Employees and Calendar */}
-        <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
-          <RecentReviews />
-          <div className="grid grid-cols-1 rounded-[20px]">
-            <MiniCalendar />
-          </div>
-        </div>
-      </div>
+      {/* Average Revenue Per Wash */}
+      <Widget
+        icon={<IoMdCar className="h-6 w-6" />}
+        title={"Average Revenue Per Wash"}
+        subtitle={"$54"}
+      />
+
+      {/* New Memberships Sold by Type */}
+      <Card extra="p-4">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">New Memberships Sold by Type</h4>
+        <PieChart options={{}} series={pieChartData.newMemberships} />
+      </Card>
+
+      {/* Total New Memberships Sold */}
+      <Widget
+        icon={<FaUsers className="h-6 w-6" />}
+        title={"Total New Memberships Sold"}
+        subtitle={"10"}
+      />
     </div>
   );
 };
 
-export default Today;
+export default TodayDashboard;
