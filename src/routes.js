@@ -1,20 +1,21 @@
 import React from "react";
 
 // Admin Imports
-import MainDashboard from "views/admin/default";
+import Overview from "views/admin/default/Overview";
 import TodayDashboard from "views/admin/default/Today";
+import MembersDashboard from "views/admin/default/Members";
 import Profile from "views/admin/profile";
 
 // Icon Imports
-import { MdHome, MdPerson, MdToday } from "react-icons/md";
+import { MdHome, MdPerson, MdToday, MdGroup } from "react-icons/md";
 
 const routes = [
   {
-    name: "Main Dashboard",
+    name: "Overview",
     layout: "/admin",
-    path: "default",
+    path: "overview",
     icon: <MdHome className="h-6 w-6" />,
-    component: <MainDashboard />,
+    component: <Overview />,
   },
   {
     name: "Today",
@@ -22,6 +23,13 @@ const routes = [
     path: "today",
     icon: <MdToday className="h-6 w-6" />,
     component: <TodayDashboard />,
+  },
+  {
+    name: "Members",
+    layout: "/admin",
+    path: "members",
+    icon: <MdGroup className="h-6 w-6" />,
+    component: <MembersDashboard />,
   },
   {
     name: "Profile",
