@@ -4,10 +4,11 @@ import React from "react";
 import Overview from "views/admin/default/Overview";
 import TodayDashboard from "views/admin/default/Today";
 import MembersDashboard from "views/admin/default/Members";
+import OnlineSalesDashboard from "views/admin/default/OnlineSales";
 import Profile from "views/admin/profile";
 
 // Icon Imports
-import { MdHome, MdPerson, MdToday, MdGroup } from "react-icons/md";
+import { MdHome, MdPerson, MdToday, MdGroup, MdShoppingCart } from "react-icons/md";
 
 const routes = [
   {
@@ -30,6 +31,13 @@ const routes = [
     path: "members",
     icon: <MdGroup className="h-6 w-6" />,
     component: <MembersDashboard />,
+  },
+  {
+    name: "Online Sales",
+    layout: "/admin",
+    path: "online-sales",
+    icon: <MdShoppingCart className="h-6 w-6" />,
+    component: <OnlineSalesDashboard />,
   },
   {
     name: "Profile",
