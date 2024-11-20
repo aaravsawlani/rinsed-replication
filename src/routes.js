@@ -5,10 +5,11 @@ import Overview from "views/admin/default/Overview";
 import TodayDashboard from "views/admin/default/Today";
 import MembersDashboard from "views/admin/default/Members";
 import OnlineSalesDashboard from "views/admin/default/OnlineSales";
+import DownsellsDashboard from "views/admin/default/Downsells";
 import Profile from "views/admin/profile";
 
 // Icon Imports
-import { MdHome, MdPerson, MdToday, MdGroup, MdShoppingCart } from "react-icons/md";
+import { MdHome, MdPerson, MdToday, MdGroup, MdShoppingCart, MdTrendingDown } from "react-icons/md";
 
 const routes = [
   {
@@ -38,6 +39,13 @@ const routes = [
     path: "online-sales",
     icon: <MdShoppingCart className="h-6 w-6" />,
     component: <OnlineSalesDashboard />,
+  },
+  {
+    name: "Downsells",
+    layout: "/admin",
+    path: "downsells",
+    icon: <MdTrendingDown className="h-6 w-6" />,
+    component: <DownsellsDashboard />,
   },
   {
     name: "Profile",
