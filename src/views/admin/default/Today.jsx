@@ -38,7 +38,7 @@ const barChartOptions = {
 
 const TodayDashboard = () => {
   return (
-    <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+    <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
       {/* Total Cars Washed by Type */}
       <Card extra="p-4">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Total Cars Washed by Type</h4>

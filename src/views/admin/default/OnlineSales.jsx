@@ -25,7 +25,7 @@ const barChartDataPromoCodes = [
 
 const OnlineSalesDashboard = () => {
   return (
-    <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+    <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
       {/* Statistics */}
       <Widget
         icon={<FaDollarSign className="h-6 w-6" />}
