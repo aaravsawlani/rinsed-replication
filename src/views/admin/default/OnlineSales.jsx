@@ -29,13 +29,33 @@ const OnlineSalesDashboard = () => {
       {/* Statistics */}
       <Widget
         icon={<FaDollarSign className="h-6 w-6" />}
-        title={"Total Online Revenue"}
-        subtitle={"Today: $1,200 | Week: $8,400 | Month: $36,000"}
+        title={"Online Revenue Today"}
+        subtitle={"$1,200"}
+      />
+      <Widget
+        icon={<FaDollarSign className="h-6 w-6" />}
+        title={"Online Revenue This Week"}
+        subtitle={"$8,400"}
+      />
+      <Widget
+        icon={<FaDollarSign className="h-6 w-6" />}
+        title={"Online Revenue This Month"}
+        subtitle={"$36,000"}
       />
       <Widget
         icon={<FaShoppingCart className="h-6 w-6" />}
-        title={"Memberships Sold Online"}
-        subtitle={"Today: 10 | Week: 70 | Month: 300"}
+        title={"Memberships Sold Today"}
+        subtitle={"10"}
+      />
+      <Widget
+        icon={<FaShoppingCart className="h-6 w-6" />}
+        title={"Memberships Sold This Week"}
+        subtitle={"70"}
+      />
+      <Widget
+        icon={<FaShoppingCart className="h-6 w-6" />}
+        title={"Memberships Sold This Month"}
+        subtitle={"300"}
       />
       <Widget
         icon={<FaChartLine className="h-6 w-6" />}
