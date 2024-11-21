@@ -7,10 +7,11 @@ import MembersDashboard from "views/admin/default/Members";
 import OnlineSalesDashboard from "views/admin/default/OnlineSales";
 import DownsellsDashboard from "views/admin/default/Downsells";
 import CCDeclineDashboard from "views/admin/default/CCDecline";
+import RetailWashDashboard from "views/admin/default/RetailWashDashboard";
 import Profile from "views/admin/profile";
 
 // Icon Imports
-import { MdHome, MdPerson, MdToday, MdGroup, MdShoppingCart, MdTrendingDown, MdCreditCard } from "react-icons/md";
+import { MdHome, MdPerson, MdToday, MdGroup, MdShoppingCart, MdTrendingDown, MdCreditCard, MdLocalCarWash } from "react-icons/md";
 
 const routes = [
   {
@@ -54,6 +55,13 @@ const routes = [
     path: "cc-decline",
     icon: <MdCreditCard className="h-6 w-6" />,
     component: <CCDeclineDashboard />,
+  },
+  {
+    name: "Retail Wash",
+    layout: "/admin",
+    path: "retail-wash",
+    icon: <MdLocalCarWash className="h-6 w-6" />,
+    component: <RetailWashDashboard />,
   },
   {
     name: "Profile",
