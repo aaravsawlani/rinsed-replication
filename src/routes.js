@@ -8,10 +8,11 @@ import OnlineSalesDashboard from "views/admin/default/OnlineSales";
 import DownsellsDashboard from "views/admin/default/Downsells";
 import CCDeclineDashboard from "views/admin/default/CCDecline";
 import RetailWashDashboard from "views/admin/default/RetailWashDashboard";
+import DetailServicesDashboard from "views/admin/default/DetailServicesDashboard";
 import Profile from "views/admin/profile";
 
 // Icon Imports
-import { MdHome, MdPerson, MdToday, MdGroup, MdShoppingCart, MdTrendingDown, MdCreditCard, MdLocalCarWash } from "react-icons/md";
+import { MdHome, MdPerson, MdToday, MdGroup, MdShoppingCart, MdTrendingDown, MdCreditCard, MdLocalCarWash, MdBuild } from "react-icons/md";
 
 const routes = [
   {
@@ -57,11 +58,18 @@ const routes = [
     component: <CCDeclineDashboard />,
   },
   {
-    name: "Wash Breakdowns",
+    name: "Retail Wash",
     layout: "/admin",
     path: "retail-wash",
     icon: <MdLocalCarWash className="h-6 w-6" />,
     component: <RetailWashDashboard />,
+  },
+  {
+    name: "Detail Services",
+    layout: "/admin",
+    path: "detail-services",
+    icon: <MdBuild className="h-6 w-6" />,
+    component: <DetailServicesDashboard />,
   },
   {
     name: "Profile",
