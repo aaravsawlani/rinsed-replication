@@ -57,7 +57,7 @@ const routes = [
     component: <CCDeclineDashboard />,
   },
   {
-    name: "Retail Wash",
+    name: "Wash Breakdowns",
     layout: "/admin",
     path: "retail-wash",
     icon: <MdLocalCarWash className="h-6 w-6" />,
