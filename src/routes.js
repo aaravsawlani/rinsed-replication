@@ -9,10 +9,11 @@ import DownsellsDashboard from "views/admin/default/Downsells";
 import CCDeclineDashboard from "views/admin/default/CCDecline";
 import RetailWashDashboard from "views/admin/default/RetailWashDashboard";
 import DetailServicesDashboard from "views/admin/default/DetailServicesDashboard";
+import MembersList from "views/admin/default/MembersList";
 import Profile from "views/admin/profile";
 
 // Icon Imports
-import { MdHome, MdPerson, MdToday, MdGroup, MdShoppingCart, MdTrendingDown, MdCreditCard, MdLocalCarWash, MdBuild } from "react-icons/md";
+import { MdHome, MdPerson, MdToday, MdGroup, MdShoppingCart, MdTrendingDown, MdCreditCard, MdLocalCarWash, MdBuild, MdList } from "react-icons/md";
 
 const routes = [
   {
@@ -70,6 +71,13 @@ const routes = [
     path: "detail-services",
     icon: <MdBuild className="h-6 w-6" />,
     component: <DetailServicesDashboard />,
+  },
+  {
+    name: "Members List",
+    layout: "/admin",
+    path: "members-list",
+    icon: <MdList className="h-6 w-6" />,
+    component: <MembersList />,
   },
   {
     name: "Profile",
