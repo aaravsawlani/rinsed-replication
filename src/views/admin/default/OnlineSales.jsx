@@ -8,6 +8,8 @@ import { FaDollarSign, FaShoppingCart, FaChartLine } from "react-icons/fa";
 
 // Fake data for the charts
 const pieChartData = [50, 30, 20]; // Example: [Basic Wash, Premium Wash, Memberships]
+const pieChartDataSalesByRegion = [40, 35, 25]; // Example: [North, South, West]
+const pieChartDataFirstTimeVsReturning = [60, 40]; // Example: [First-Time Customers, Returning Customers]
 
 const lineChartDataSalesTrends = [
   {
@@ -67,11 +69,26 @@ const OnlineSalesDashboard = () => {
         title={"Average Order Value (AOV)"}
         subtitle={"$120"}
       />
+      <Widget
+        icon={<FaChartLine className="h-6 w-6" />}
+        title={"Abandoned Cart Rate"}
+        subtitle={"25%"}
+      />
 
       {/* Graphs */}
-      <Card extra="p-4 col-span-2">
+      <Card extra="p-4">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Online Sales by Product/Service</h4>
         <PieChart options={{}} series={pieChartData} />
+      </Card>
+
+      <Card extra="p-4">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Sales by Region</h4>
+        <PieChart options={{}} series={pieChartDataSalesByRegion} />
+      </Card>
+
+      <Card extra="p-4">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">First-Time vs. Returning Customers</h4>
+        <PieChart options={{}} series={pieChartDataFirstTimeVsReturning} />
       </Card>
 
       <Card extra="p-4 col-span-2">
