@@ -25,16 +25,9 @@ const barChartDataDeclineRateByTier = [
 const stackedBarChartDataRevenueRecovered = [
   {
     name: "Basic",
-    data: [2000],
+    data: [1000, 2000, 3000],
   },
-  {
-    name: "Premium",
-    data: [3000],
-  },
-  {
-    name: "Unlimited",
-    data: [1000],
-  },
+
 ];
 
 const CCDeclineDashboard = () => {

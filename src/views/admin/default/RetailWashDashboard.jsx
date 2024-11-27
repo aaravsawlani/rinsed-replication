@@ -12,35 +12,15 @@ const pieChartDataWashesByType = [40, 30, 20, 10]; // Example: [Basic, Deluxe, P
 const barChartDataRevenueByWashType = [
   {
     name: "Basic",
-    data: [2000],
-  },
-  {
-    name: "Deluxe",
-    data: [3000],
-  },
-  {
-    name: "Premium",
-    data: [4000],
-  },
-  {
-    name: "Ultimate",
-    data: [5000],
-  },
+    data: [2000, 3000, 4000, 5000],
+  }
 ];
 
 const barChartDataAddOnServices = [
   {
     name: "Waxing",
-    data: [1000],
-  },
-  {
-    name: "Tire Shine",
-    data: [1500],
-  },
-  {
-    name: "Underbody Wash",
-    data: [800],
-  },
+    data: [1000, 1500, 800],
+  }
 ];
 
 const lineChartDataWashSalesByTime = [
@@ -53,47 +33,15 @@ const lineChartDataWashSalesByTime = [
 const barChartDataWashVolumeByDay = [
   {
     name: "Monday",
-    data: [100],
-  },
-  {
-    name: "Tuesday",
-    data: [150],
-  },
-  {
-    name: "Wednesday",
-    data: [200],
-  },
-  {
-    name: "Thursday",
-    data: [250],
-  },
-  {
-    name: "Friday",
-    data: [300],
-  },
-  {
-    name: "Saturday",
-    data: [350],
-  },
-  {
-    name: "Sunday",
-    data: [400],
-  },
+    data: [100, 150, 200, 250, 300, 350, 400],
+  }
 ];
 
 const barChartDataTopSellingAddOns = [
   {
     name: "Waxing",
-    data: [1000],
-  },
-  {
-    name: "Tire Shine",
-    data: [1500],
-  },
-  {
-    name: "Underbody Wash",
-    data: [800],
-  },
+    data: [1000, 2000, 1500],
+  }
 ];
 
 const lineChartDataRevenueGrowthByWashType = [
