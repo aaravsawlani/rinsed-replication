@@ -17,16 +17,9 @@ const lineChartDataDeclinesOverTime = [
 const barChartDataDeclineRateByTier = [
   {
     name: "Basic",
-    data: [10],
+    data: [10, 15, 20],
   },
-  {
-    name: "Premium",
-    data: [15],
-  },
-  {
-    name: "Unlimited",
-    data: [5],
-  },
+
 ];
 
 const stackedBarChartDataRevenueRecovered = [
