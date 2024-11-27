@@ -100,6 +100,11 @@ const MembersDashboard = () => {
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Plan Upgrades and Downgrades Over Time</h4>
         <LineChart options={{}} series={lineChartDataUpgradesDowngrades} />
       </Card>
+
+      <Card extra="p-4 col-span-2">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Member Churn by Months Since Joining</h4>
+        <LineChart options={{}} series={lineChartDataChurn} />
+      </Card>
     </div>
   );
 };

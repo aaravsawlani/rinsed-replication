@@ -5,6 +5,7 @@ import PieChart from "components/charts/PieChart";
 import BarChart from "components/charts/BarChart";
 import Widget from "components/widget/Widget";
 import { FaDollarSign, FaChartLine, FaExchangeAlt } from "react-icons/fa";
+import StackedBarChart from "components/charts/StackedBarChart";
 
 // Fake data for the charts
 const barChartDataDownsellsByTier = [
@@ -53,6 +54,22 @@ const barChartDataRevenueByTier = [
   {
     name: "Revenue by Downsell Tier",
     data: [2000, 1500, 1000], // Example: [Premium to Basic, Super to Basic, Premium to Super]
+  },
+];
+
+// Fake data for revenue recovered over time
+const stackedBarChartDataRevenueRecovered = [
+  {
+    name: "Basic",
+    data: [2000, 2500, 3000, 3500, 4000], // Example data over time
+  },
+  {
+    name: "Premium",
+    data: [1500, 2000, 2500, 3000, 3500],
+  },
+  {
+    name: "Unlimited",
+    data: [1000, 1500, 2000, 2500, 3000],
   },
 ];
 
@@ -110,6 +127,11 @@ const DownsellsDashboard = () => {
       <Card extra="p-4">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Revenue by Downsell Tier</h4>
         <BarChart chartData={barChartDataRevenueByTier} chartOptions={{}} />
+      </Card>
+
+      <Card extra="p-4">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Revenue Recovered Over Time</h4>
+        <StackedBarChart chartData={stackedBarChartDataRevenueRecovered} chartOptions={{}} />
       </Card>
     </div>
   );

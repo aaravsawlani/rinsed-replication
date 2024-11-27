@@ -115,6 +115,9 @@ const lineChartDataRevenueGrowthByWashType = [
   },
 ];
 
+// Fake data for customer volume
+const pieChartDataCustomerVolume = [60, 40]; // Example: [Repeat Customers, First-Time Customers]
+
 const RetailWashDashboard = () => {
   return (
     <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -169,6 +172,11 @@ const RetailWashDashboard = () => {
       <Card extra="p-4 col-span-2">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Revenue Growth by Wash Type</h4>
         <LineChart options={{}} series={lineChartDataRevenueGrowthByWashType} />
+      </Card>
+
+      <Card extra="p-4">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Volume from Repeat vs. First-Time Customers</h4>
+        <PieChart options={{}} series={pieChartDataCustomerVolume} />
       </Card>
     </div>
   );
