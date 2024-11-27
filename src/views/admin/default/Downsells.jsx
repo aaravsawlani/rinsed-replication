@@ -130,15 +130,14 @@ const DownsellsDashboard = () => {
         <LineChart options={{}} series={lineChartDataMonthlyTrends} />
       </Card>
 
+      <Card extra="p-4">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Revenue by Downsell Tier</h4>
+        <BarChart chartData={barChartDataRevenueByTier} chartOptions={{}} />
+      </Card>
 
       <Card extra="p-4 col-span-2">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Customer Retention After Downsells</h4>
         <LineChart options={{}} series={lineChartDataRetentionRates} />
-      </Card>
-
-      <Card extra="p-4">
-        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Revenue by Downsell Tier</h4>
-        <BarChart chartData={barChartDataRevenueByTier} chartOptions={{}} />
       </Card>
 
       <Card extra="p-4">
