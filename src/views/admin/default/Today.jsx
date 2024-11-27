@@ -60,6 +60,23 @@ const TodayDashboard = () => {
         subtitle={"10"}
       />
 
+      {/* New Statistics */}
+      <Widget
+        icon={<IoMdCar className="h-6 w-6" />}
+        title={"Total Cars Washed"}
+        subtitle={"100"} // Example value
+      />
+      <Widget
+        icon={<IoMdCar className="h-6 w-6" />}
+        title={"Total Member Cars Washed"}
+        subtitle={"60"} // Example value
+      />
+      <Widget
+        icon={<IoMdCar className="h-6 w-6" />}
+        title={"Total Non-Member Cars Washed"}
+        subtitle={"40"} // Example value
+      />
+
       {/* New Memberships Sold by Type */}
       <Card extra="p-4">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">New Memberships Sold by Type</h4>

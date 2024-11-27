@@ -61,7 +61,7 @@ const CCDeclineDashboard = () => {
         <BarChart chartData={barChartDataDeclineRateByTier} chartOptions={{}} />
       </Card>
 
-      <Card extra="p-4 col-span-2">
+      <Card extra="p-4 col-span- 1">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Revenue Recovered by Membership Tier</h4>
         <StackedBarChart chartData={stackedBarChartDataRevenueRecovered} chartOptions={{}} />
       </Card>
