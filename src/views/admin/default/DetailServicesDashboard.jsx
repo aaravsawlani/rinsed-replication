@@ -23,6 +23,22 @@ const barChartDataRevenueByServiceType = [
   },
 ];
 
+// New bar chart data for Detail Service Upgrade Rate by Wash Type
+const barChartDataUpgradeRateByWashType = [
+  {
+    name: "Basic Wash to Premium",
+    data: [50],
+  },
+  {
+    name: "Basic Wash to Super",
+    data: [30],
+  },
+  {
+    name: "Premium to Ceramic",
+    data: [20],
+  },
+];
+
 const pieChartDataServicesByPopularity = [40, 30, 30]; // Example: [Interior Cleaning, Exterior Polishing, Ceramic Coating]
 
 const lineChartDataServiceSalesOverTime = [
@@ -74,6 +90,17 @@ const DetailServicesDashboard = () => {
         title={"Detail Service Upsell Success Rate"}
         subtitle={"20%"}
       />
+      {/* New Statistics */}
+      <Widget
+        icon={<FaChartLine className="h-6 w-6" />}
+        title={"Repeat Rate for Detail Services"}
+        subtitle={"30%"} // Example value
+      />
+      <Widget
+        icon={<FaDollarSign className="h-6 w-6" />}
+        title={"Revenue per Hour of All Detail Services"}
+        subtitle={"$150"} // Example value
+      />
 
       {/* Graphs */}
       <Card extra="p-4">
@@ -84,6 +111,11 @@ const DetailServicesDashboard = () => {
       <Card extra="p-4">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Detail Services by Popularity</h4>
         <PieChart options={{}} series={pieChartDataServicesByPopularity} />
+      </Card>
+
+      <Card extra="p-4">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Detail Service Upgrade Rate by Wash Type</h4>
+        <BarChart chartData={barChartDataUpgradeRateByWashType} chartOptions={{}} />
       </Card>
 
       <Card extra="p-4 col-span-2">
