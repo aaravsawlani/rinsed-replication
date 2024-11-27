@@ -27,12 +27,8 @@ const pieChartDataRecoveryRevenueByTier = [50, 30, 20]; // Example: [Basic, Prem
 
 const barChartDataLTVComparison = [
   {
-    name: "Downsold Customers",
-    data: [5000],
-  },
-  {
-    name: "Canceled Customers",
-    data: [3000],
+    name: "Lifetime Value of Downsold Customers",
+    data: [3000, 5000], // Single series for LTV
   },
 ];
 
@@ -121,7 +117,7 @@ const DownsellsDashboard = () => {
       </Card>
 
       <Card extra="p-4">
-        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Lifetime Value (LTV) of Downsold Customers</h4>
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Lifetime Value of Downsold Customers</h4>
         <BarChart chartData={barChartDataLTVComparison} chartOptions={{}} />
       </Card>
 
