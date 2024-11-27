@@ -69,7 +69,7 @@ const OnlineSalesDashboard = () => {
       />
 
       {/* Graphs */}
-      <Card extra="p-4">
+      <Card extra="p-4 col-span-2">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Online Sales by Product/Service</h4>
         <PieChart options={{}} series={pieChartData} />
       </Card>
