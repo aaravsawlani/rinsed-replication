@@ -92,19 +92,19 @@ const MembersDashboard = () => {
       </Card>
 
       {/* Churn Over Last 3 Months - Spanning Two Rows */}
-      <Card extra="p-4 col-span-3 row-span-2 h-100">
+      <Card extra="p-4 col-span-3 row-span-2 h-80">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Churn Over Last 3 Months</h4>
         <LineChart options={{}} series={lineChartDataChurn} />
       </Card>
 
       {/* Plan Upgrades and Downgrades Over Time - Spanning Two Rows */}
-      <Card extra="p-4 col-span-3 row-span-2 h-100">
+      <Card extra="p-4 col-span-3 row-span-2 h-80">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Plan Upgrades and Downgrades Over Time</h4>
         <LineChart options={{}} series={lineChartDataUpgradesDowngrades} />
       </Card>
 
       {/* Member Churn by Months Since Joining - Spanning Two Rows */}
-      <Card extra="p-4 col-span-3 row-span-2 h-100">
+      <Card extra="p-4 col-span-3 row-span-2 h-80">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Member Churn by Months Since Joining</h4>
         <LineChart options={{}} series={lineChartDataChurn} />
       </Card>
