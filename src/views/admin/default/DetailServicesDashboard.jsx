@@ -11,32 +11,16 @@ import { FaDollarSign, FaChartLine, FaCar } from "react-icons/fa";
 const barChartDataRevenueByServiceType = [
   {
     name: "Interior Cleaning",
-    data: [2000],
-  },
-  {
-    name: "Exterior Polishing",
-    data: [3000],
-  },
-  {
-    name: "Ceramic Coating",
-    data: [4000],
-  },
+    data: [2000, 3000, 4000],
+  }
 ];
 
 // New bar chart data for Detail Service Upgrade Rate by Wash Type
 const barChartDataUpgradeRateByWashType = [
   {
     name: "Basic Wash to Premium",
-    data: [50],
-  },
-  {
-    name: "Basic Wash to Super",
-    data: [30],
-  },
-  {
-    name: "Premium to Ceramic",
-    data: [20],
-  },
+    data: [50, 30, 20],
+  }
 ];
 
 const pieChartDataServicesByPopularity = [40, 30, 30]; // Example: [Interior Cleaning, Exterior Polishing, Ceramic Coating]
@@ -58,12 +42,8 @@ const lineChartDataRevenueGrowth = [
 const stackedBarChartDataRevenueByMembership = [
   {
     name: "Members",
-    data: [5000],
-  },
-  {
-    name: "Non-Members",
-    data: [3000],
-  },
+    data: [5000, 3000],
+  }
 ];
 
 const DetailServicesDashboard = () => {
