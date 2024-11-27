@@ -98,6 +98,16 @@ const DownsellsDashboard = () => {
         title={"Downsell Conversion Rate"}
         subtitle={"60%"}
       />
+      <Widget
+        icon={<FaDollarSign className="h-6 w-6" />}
+        title={"Average Discount per Downsell"}
+        subtitle={"$50"}
+      />
+      <Widget
+        icon={<FaChartLine className="h-6 w-6" />}
+        title={"Churn Rate Post Downsell"}
+        subtitle={"15%"}
+      />
 
       {/* Graphs */}
       <Card extra="p-4">
