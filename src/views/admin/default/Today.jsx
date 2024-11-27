@@ -39,6 +39,33 @@ const barChartOptions = {
 const TodayDashboard = () => {
   return (
     <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {/* Day's Revenue */}
+      <Widget
+        icon={<FaMoneyBillWave className="h-6 w-6" />}
+        title={"Day's Revenue"}
+        subtitle={"$3,240"}
+      />
+
+      {/* Average Revenue Per Wash */}
+      <Widget
+        icon={<IoMdCar className="h-6 w-6" />}
+        title={"Average Revenue Per Wash"}
+        subtitle={"$54"}
+      />
+
+      {/* Total New Memberships Sold */}
+      <Widget
+        icon={<FaUsers className="h-6 w-6" />}
+        title={"Total New Memberships Sold"}
+        subtitle={"10"}
+      />
+
+      {/* New Memberships Sold by Type */}
+      <Card extra="p-4">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">New Memberships Sold by Type</h4>
+        <PieChart options={{}} series={pieChartData.newMemberships} />
+      </Card>
+
       {/* Total Cars Washed by Type */}
       <Card extra="p-4">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Total Cars Washed by Type</h4>
@@ -62,33 +89,6 @@ const TodayDashboard = () => {
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Total Cars Washed Per Hour</h4>
         <BarChart chartData={barChartData} chartOptions={barChartOptions} />
       </Card>
-
-      {/* Day's Revenue */}
-      <Widget
-        icon={<FaMoneyBillWave className="h-6 w-6" />}
-        title={"Day's Revenue"}
-        subtitle={"$3,240"}
-      />
-
-      {/* Average Revenue Per Wash */}
-      <Widget
-        icon={<IoMdCar className="h-6 w-6" />}
-        title={"Average Revenue Per Wash"}
-        subtitle={"$54"}
-      />
-
-      {/* New Memberships Sold by Type */}
-      <Card extra="p-4">
-        <h4 className="text-lg font-bold text-navy-700 dark:text-white">New Memberships Sold by Type</h4>
-        <PieChart options={{}} series={pieChartData.newMemberships} />
-      </Card>
-
-      {/* Total New Memberships Sold */}
-      <Widget
-        icon={<FaUsers className="h-6 w-6" />}
-        title={"Total New Memberships Sold"}
-        subtitle={"10"}
-      />
     </div>
   );
 };
