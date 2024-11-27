@@ -41,7 +41,7 @@ const lineChartDataRevenueGrowth = [
 
 const stackedBarChartDataRevenueByMembership = [
   {
-    name: "Members",
+    name: "Members", 
     data: [5000, 3000],
   }
 ];
@@ -103,15 +103,17 @@ const DetailServicesDashboard = () => {
         <LineChart options={{}} series={lineChartDataServiceSalesOverTime} />
       </Card>
 
+      <Card extra="p-4">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Detail Service Revenue by Membership vs. Non-Members</h4>
+        <StackedBarChart chartData={stackedBarChartDataRevenueByMembership} chartOptions={{}} />
+      </Card>
+
       <Card extra="p-4 col-span-2">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Revenue Growth from Detail Services</h4>
         <LineChart options={{}} series={lineChartDataRevenueGrowth} />
       </Card>
 
-      <Card extra="p-4">
-        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Detail Service Revenue by Membership vs. Non-Members</h4>
-        <StackedBarChart chartData={stackedBarChartDataRevenueByMembership} chartOptions={{}} />
-      </Card>
+
     </div>
   );
 };
