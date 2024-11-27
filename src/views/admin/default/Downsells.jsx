@@ -120,15 +120,16 @@ const DownsellsDashboard = () => {
         <PieChart options={{}} series={pieChartDataRecoveryRevenueByTier} />
       </Card>
 
+      <Card extra="p-4">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Lifetime Value (LTV) of Downsold Customers</h4>
+        <BarChart chartData={barChartDataLTVComparison} chartOptions={{}} />
+      </Card>
+
       <Card extra="p-4 col-span-2">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Monthly Downsell Trends</h4>
         <LineChart options={{}} series={lineChartDataMonthlyTrends} />
       </Card>
 
-      <Card extra="p-4">
-        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Lifetime Value (LTV) of Downsold Customers</h4>
-        <BarChart chartData={barChartDataLTVComparison} chartOptions={{}} />
-      </Card>
 
       <Card extra="p-4 col-span-2">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Customer Retention After Downsells</h4>
