@@ -48,37 +48,13 @@ const lineChartDataUpgradesDowngrades = [
 const MembersDashboard = () => {
   return (
     <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-      {/* Statistics */}
-      <Widget
-        icon={<FaUsers className="h-6 w-6" />}
-        title={"Total Members"}
-        subtitle={"1,567"}
-      />
-      <Widget
-        icon={<FaUsers className="h-6 w-6" />}
-        title={"Members Signed Up Today"}
-        subtitle={"12"}
-      />
-      <Widget
-        icon={<FaUsers className="h-6 w-6" />}
-        title={"Members Signed Up in Last 7 Days"}
-        subtitle={"84"}
-      />
-      <Widget
-        icon={<FaChartLine className="h-6 w-6" />}
-        title={"Average Member Visit Frequency"}
-        subtitle={"3.5 visits/month"}
-      />
-      <Widget
-        icon={<FaDollarSign className="h-6 w-6" />}
-        title={"Average Member Revenue"}
-        subtitle={"$120"}
-      />
-      <Widget
-        icon={<FaUsers className="h-6 w-6" />}
-        title={"At Risk Members"}
-        subtitle={"45"}
-      />
+      {/* Statistics Widgets */}
+      <Widget title={"Total Members"} subtitle={"1,567"} />
+      <Widget title={"Members Signed Up Today"} subtitle={"12"} />
+      <Widget title={"Members Signed Up in Last 7 Days"} subtitle={"84"} />
+      <Widget title={"Average Member Visit Frequency"} subtitle={"3.5 visits/month"} />
+      <Widget title={"Average Member Revenue"} subtitle={"$120"} />
+      <Widget title={"At Risk Members"} subtitle={"45"} />
 
       {/* Graphs */}
       <Card extra="p-4 col-span-2">
@@ -92,19 +68,19 @@ const MembersDashboard = () => {
       </Card>
 
       {/* Churn Over Last 3 Months - Spanning Two Rows */}
-      <Card extra="p-4 col-span-3 row-span-8">
+      <Card extra="p-4 col-span-3 row-span-2">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Churn Over Last 3 Months</h4>
         <LineChart options={{}} series={lineChartDataChurn} />
       </Card>
 
       {/* Plan Upgrades and Downgrades Over Time - Spanning Two Rows */}
-      <Card extra="p-4 col-span-3 row-span-8">
+      <Card extra="p-4 col-span-3 row-span-2">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Plan Upgrades and Downgrades Over Time</h4>
         <LineChart options={{}} series={lineChartDataUpgradesDowngrades} />
       </Card>
 
       {/* Member Churn by Months Since Joining - Spanning Two Rows */}
-      <Card extra="p-4 col-span-3 row-span-8">
+      <Card extra="p-4 col-span-3 row-span-2">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Member Churn by Months Since Joining</h4>
         <LineChart options={{}} series={lineChartDataChurn} />
       </Card>
