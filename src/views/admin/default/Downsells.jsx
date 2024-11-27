@@ -22,7 +22,8 @@ const lineChartDataMonthlyTrends = [
   },
 ];
 
-const pieChartDataCancellationReasons = [40, 30, 20, 10]; // Example: [Financial, Dissatisfaction, Usage, Other]
+// New pie chart data for Recovery Revenue by Tier
+const pieChartDataRecoveryRevenueByTier = [50, 30, 20]; // Example: [Basic, Premium, Unlimited]
 
 const barChartDataLTVComparison = [
   {
@@ -104,14 +105,14 @@ const DownsellsDashboard = () => {
         <BarChart chartData={barChartDataDownsellsByTier} chartOptions={{}} />
       </Card>
 
+      <Card extra="p-4">
+        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Recovery Revenue by Tier</h4>
+        <PieChart options={{}} series={pieChartDataRecoveryRevenueByTier} />
+      </Card>
+
       <Card extra="p-4 col-span-2">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">Monthly Downsell Trends</h4>
         <LineChart options={{}} series={lineChartDataMonthlyTrends} />
-      </Card>
-
-      <Card extra="p-4">
-        <h4 className="text-lg font-bold text-navy-700 dark:text-white">Reasons for Original Cancellation</h4>
-        <PieChart options={{}} series={pieChartDataCancellationReasons} />
       </Card>
 
       <Card extra="p-4">
